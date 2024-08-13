@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-const apiUrl = import.meta.env.VITE_RECIPE_KEY;
+const apiUrl = import.meta.env.VITE_APP_KEY;
 const DataDisplay = () => {
 	const [recipe, setRecipe] = useState([]);
 	useEffect(() => {
@@ -9,16 +9,17 @@ const DataDisplay = () => {
 			`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=9`
 		)
 			.then((res) => res.json())
-			.then((data) => setRecipe(data));
+			.then((data) => console.log(data));
 	});
-    return <main>
-        <div>
-            {recipe.map((recipes) => (
-                
-            ))}
-    </div>
-
-    </main>;
+	return (
+		<main>
+			<div>
+				{/* {recipe.map((data) => (
+					<h1> {data.}</h1>
+				))} */}
+			</div>
+		</main>
+	);
 };
 
 export default DataDisplay;
