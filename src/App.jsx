@@ -1,11 +1,19 @@
-import React from 'react'
-import HeroSection from './component/HeroSection';
+
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+// import DataDisplay from "./component/DataDisplay";
+import RecipeComponent from "./component/DataDisplay";
 
 function App() {
-  return (
-    <div>
-      <HeroSection />
-    </div>
-  )
+	const [count, setCount] = useState(0);
+
+	return (
+		<div>
+			<RecipeComponent /> 
+    <HeroSection />
+		</div>
+	);
 }
-export default App;
+
