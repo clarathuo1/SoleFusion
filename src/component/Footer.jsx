@@ -41,7 +41,7 @@ const Footer = () => {
 								href="mailto:alizabdi21@gmail.com"
 								className="text-yellow-200 hover:underline"
 							>
-								alizabdi21@gmail.com
+								Noshnavigator@gmail.com
 							</a>
 							<br />
 							Phone: +25748862662

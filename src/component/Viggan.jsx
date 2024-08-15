@@ -54,8 +54,10 @@ const Viggan = () => {
 
 	return (
 		<div className=" shadow-sm rounded-md  border-t-2 mt-3">
-			<div>
-				<h1> Viggan </h1>
+			<div className=" items-center justify-center flex m-5 border-b-2 p-2 drop-shadow-lg  ">
+				<div className=" hover:bg-gray-400 cursor-not-allowed  bg-opacity-50 backdrop-blur-sm bg-gray-800 rounded-md p-2 text-white">
+					<h1> Veggan </h1>
+				</div>
 			</div>
 			<div className=" grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4 justify-center items-center p-2 md:p-4  lg:p-8 shadow-md">
 				{recipe.map((recipes) => (

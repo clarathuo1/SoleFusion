@@ -15,9 +15,6 @@ function Navbar() {
 					<div className="navbar-logo">NOSH NAVIGATOR</div>
 
 					{/* Search Bar */}
-					<div className="navbar-search">
-						<input type="text" placeholder="Search..." />
-					</div>
 				</div>
 
 				{/* Divider Line */}

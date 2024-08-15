@@ -10,7 +10,7 @@ const HeroSection = () => {
 
 	const getRecipe = async () => {
 		const response = await fetch(
-			`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=1`
+			`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=3`
 		);
 
 		const data = await response.json();
