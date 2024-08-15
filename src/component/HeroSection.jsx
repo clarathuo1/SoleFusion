@@ -20,6 +20,7 @@ const HeroSection = () => {
 				</div>
 			</section>
 
+
 			{/* Features Section */}
 			<section className="w-full py-12 bg-white">
 				<div className="container mx-auto flex flex-wrap justify-around">
