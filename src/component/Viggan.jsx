@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router";
-import { Link } from "react-router-dom";
+import { apiUrl } from "./DataDisplay";
 
-export const apiUrl = import.meta.env.VITE_APP_KEY;
-const RecipeComponent = () => {
+const Viggan = () => {
 	const [recipe, setRecipe] = useState([]);
 
 	useEffect(() => {
@@ -30,7 +29,7 @@ const RecipeComponent = () => {
 			try {
 				// Fetch new recipes from the API
 				const response = await fetch(
-					`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=15`
+					`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=9&tags=vegetarian`
 				);
 
 				if (!response.ok) {
@@ -52,26 +51,15 @@ const RecipeComponent = () => {
 	};
 
 	return (
-		<div className=" shadow-md rounded-md ">
-			<h1>Popular</h1>
-			<div className=" justify-center items-center text-center m-8 ">
-				<button
-					onClick={resetLocalStorage}
-					className=" bg-blue-950  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-md drop-shadow-md "
-				>
-					{" "}
-					Refresh{" "}
-				</button>
+		<div className=" shadow-sm rounded-md  border-t-2 mt-3">
+			<div>
+				<h1> Viggan </h1>
 			</div>
-
-			<div className=" grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4 justify-center items-center p-2 md:p-4  lg:p-8 ">
+			<div className=" grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4 justify-center items-center p-2 md:p-4  lg:p-8 shadow-md">
 				{recipe.map((recipes) => (
-					<div key={recipes.id} className="relative shadow-md">
-						<div className="group flex transform flex-col cursor-pointer overflow-hidden transition-all duration-200">
-							<Link
-								to={`/moreDetails/${recipes.title}`}
-								className="overflow-hidden rounded-md relative"
-							>
+					<div key={recipes.id} className="relative">
+						<div className="group flex transform flex-col cursor-pointer overflow-hidden transition-all duration-200 shadow-md">
+							<div className="overflow-hidden rounded-md relative">
 								<img
 									src={recipes.image}
 									className="h-full w-full transform object-cover transition-all duration-200 group-hover:scale-105"
@@ -84,7 +72,7 @@ const RecipeComponent = () => {
 										<h1 className="text-white">{recipes.title}</h1>
 									</div>
 								</div>
-							</Link>
+							</div>
 						</div>
 					</div>
 				))}
@@ -93,4 +81,4 @@ const RecipeComponent = () => {
 	);
 };
 
-export default RecipeComponent;
+export default Viggan;
