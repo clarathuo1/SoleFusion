@@ -13,7 +13,7 @@ function Navbar() {
       {/* Main Navigation */}
       <nav className="main-nav">
         <div className="nav-container">
-          <i className="fas fa-bars"></i> {/* Hamburger icon */}
+          <i className="icon-bar"></i> 
           <div className="navbar-logo">
             NOSH NAVIGATOR
           </div>
