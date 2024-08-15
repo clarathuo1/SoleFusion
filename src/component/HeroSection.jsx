@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-screen bg-cover bg-center bg-[url('../assets/download(5).jpg')]">
+      <section className="relative w-full h-screen bg-cover bg-center bg-[url('../src/assets/download(5).jpg')]">
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white p-6 text-center">
           <h1 className="text-4xl font-extrabold mb-4">Welcome to Nosh Navigator!</h1>
           <p className="text-lg mb-6 max-w-lg">We are excited to have you on board 
