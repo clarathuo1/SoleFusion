@@ -1,28 +1,25 @@
-import Footer from "./component/Footer"
-import { useState } from "react";
-import "./App.css";
-import DataDisplay from "./component/DataDisplay";
-//import RecipeComponent from "./component/DataDisplay";
 import HeroSection from "./component/HeroSection";
 import Viggan from "./component/Viggan";
-// import Footer from "./component/MoreDetails";
-
+import Navbar from "./component/Navbar";
+import "./App.css";
+import RecipeComponent from "./component/RecipeComponent";
+import Footer from "./component/Footer";
 function App() {
 	return (
 		<div>
-  <Navbar />
+			<Navbar />
 			<div>
 				<HeroSection />
 			</div>
 			<div>
-				<DataDisplay />
+				<RecipeComponent />
 			</div>
 			<div className=" m-3 shadow-sm">
 				<Viggan />
 			</div>
-      <div>
-      <Footer/>
-     </div>
+			<div>
+				<Footer />
+			</div>
 		</div>
 	);
 }

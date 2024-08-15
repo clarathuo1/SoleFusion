@@ -6,7 +6,6 @@ import { RouterProvider } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import MoreDetails from "./component/MoreDetails.jsx";
 
-
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -24,4 +23,3 @@ createRoot(document.getElementById("root")).render(
 		<RouterProvider router={router} />
 	</StrictMode>
 );
-
