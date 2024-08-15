@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router";
-import { apiUrl } from "./DataDisplay";
+// import { apiUrl } from "./";
 import { Link } from "react-router-dom";
+import { apiUrl } from "./RecipeComponent";
 
 const Viggan = () => {
 	const [recipe, setRecipe] = useState([]);

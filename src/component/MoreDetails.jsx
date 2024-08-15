@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { apiUrl } from "./DataDisplay";
+import { apiUrl } from "./RecipeComponent";
 
 const MoreDetails = () => {
 	const { title } = useParams();

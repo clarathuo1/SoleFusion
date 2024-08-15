@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { apiUrl } from "./DataDisplay";
+import { apiUrl } from "./RecipeComponent";
 
 const HeroSection = () => {
-	const [recipe, setRecipe] = useState([]);
+	const [recipe, setRecipe] = useState(null);
 
 	useEffect(() => {
 		getRecipe();
 	}, []);
 
 	const getRecipe = async () => {
-		// Check if recipes are already in localStorage
-
-		// Fetch new recipes from the API
 		const response = await fetch(
 			`https://api.spoonacular.com/recipes/random?apiKey=${apiUrl}&number=1`
 		);
@@ -19,9 +16,6 @@ const HeroSection = () => {
 		const data = await response.json();
 		const recipes = data.recipes;
 
-		// Store fetched recipes in localStorage
-
-		// Update the state with fetched recipes
 		setRecipe(recipes);
 	};
 
@@ -48,10 +42,9 @@ const HeroSection = () => {
 			<section className="w-full py-12 bg-white">
 				<div className="container mx-auto flex flex-wrap justify-around">
 					<div className="w-full md:w-1/3 p-4 text-center">
-						{}
 						<img
-							src=""
-							alt="Feature 1"
+							src={recipe ? recipe.image : "/path-to-default-image.png"}
+							alt="Trending Foods"
 							className="mx-auto mb-4 w-20 h-20 object-contain"
 						/>
 						<h3 className="text-xl font-semibold mb-2">Trending Foods</h3>

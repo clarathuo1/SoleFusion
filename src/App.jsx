@@ -1,16 +1,13 @@
-import { useState } from "react";
-
-import "./App.css";
-import RecipeComponent from "./component/DataDisplay";
 import HeroSection from "./component/HeroSection";
 import Viggan from "./component/Viggan";
-
+import Navbar from "./component/Navbar";
+import "./App.css";
+import RecipeComponent from "./component/RecipeComponent";
+import Footer from "./component/Footer";
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<div>
-			{" "}
+			<Navbar />
 			<div>
 				<HeroSection />
 			</div>
@@ -20,8 +17,10 @@ function App() {
 			<div className=" m-3 shadow-sm">
 				<Viggan />
 			</div>
+			<div>
+				<Footer />
+			</div>
 		</div>
 	);
 }
-
 export default App;

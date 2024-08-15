@@ -54,7 +54,13 @@ const RecipeComponent = () => {
 
 	return (
 		<div className=" shadow-md rounded-md ">
-			<h1>Popular</h1>
+			<div className="navbar-search ">
+				<input
+					type="text"
+					placeholder="Search..."
+					className="w-[20rem]  p-3 border border-gray-300 rounded-lg focus:outline-none"
+				/>
+			</div>
 			<div className=" justify-center items-center text-center m-8 ">
 				<button
 					onClick={resetLocalStorage}
