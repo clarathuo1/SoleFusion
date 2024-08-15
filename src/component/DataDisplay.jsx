@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { redirect } from "react-router";
 import { Link } from "react-router-dom";
 
-export const apiUrl = import.meta.env.VITE_APP_KEY;
+export const apiUrl = import.meta.env.VITE_RECIPE_KEY;
 const RecipeComponent = () => {
 	const [recipe, setRecipe] = useState([]);
 
@@ -10,9 +10,10 @@ const RecipeComponent = () => {
 		getRecipe();
 	}, []);
 
-	// this is a very interesting  thing  that i learnt  **LOCAL STORAGE*
+	// this is a very interesting  thing  that i learnt  **LOCAL STORAGE**
 
 	// resetting  the  local stored data in the  browser
+
 	const resetLocalStorage = () => {
 		localStorage.removeItem("recipe");
 		setRecipe([]);
@@ -69,7 +70,7 @@ const RecipeComponent = () => {
 					<div key={recipes.id} className="relative shadow-md">
 						<div className="group flex transform flex-col cursor-pointer overflow-hidden transition-all duration-200">
 							<Link
-								to={`/moreDetails/${recipes.title}`}
+								to={`/moreDetails/${recipes.id}`}
 								className="overflow-hidden rounded-md relative"
 							>
 								<img

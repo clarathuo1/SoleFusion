@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router";
 import { apiUrl } from "./DataDisplay";
+import { Link } from "react-router-dom";
 
 const Viggan = () => {
 	const [recipe, setRecipe] = useState([]);
@@ -59,7 +60,10 @@ const Viggan = () => {
 				{recipe.map((recipes) => (
 					<div key={recipes.id} className="relative">
 						<div className="group flex transform flex-col cursor-pointer overflow-hidden transition-all duration-200 shadow-md">
-							<div className="overflow-hidden rounded-md relative">
+							<Link
+								to={`/moreDetails/${recipes.title}`}
+								className="overflow-hidden rounded-md relative"
+							>
 								<img
 									src={recipes.image}
 									className="h-full w-full transform object-cover transition-all duration-200 group-hover:scale-105"
@@ -72,7 +76,7 @@ const Viggan = () => {
 										<h1 className="text-white">{recipes.title}</h1>
 									</div>
 								</div>
-							</div>
+							</Link>
 						</div>
 					</div>
 				))}
