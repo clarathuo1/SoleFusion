@@ -1,6 +1,8 @@
 import React from "react";
 
 const HeroSection = () => {
+
+
 	return (
 		<div>
 			{/* Hero Section */}
@@ -19,6 +21,7 @@ const HeroSection = () => {
 					</button>
 				</div>
 			</section>
+
 
 
 			{/* Features Section */}
