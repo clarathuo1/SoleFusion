@@ -1,13 +1,16 @@
+import Footer from "./component/Footer"
+import { useState } from "react";
 import "./App.css";
 import DataDisplay from "./component/DataDisplay";
 //import RecipeComponent from "./component/DataDisplay";
 import HeroSection from "./component/HeroSection";
 import Viggan from "./component/Viggan";
 // import Footer from "./component/MoreDetails";
+
 function App() {
 	return (
 		<div>
-			{" "}
+  <Navbar />
 			<div>
 				<HeroSection />
 			</div>
@@ -17,6 +20,9 @@ function App() {
 			<div className=" m-3 shadow-sm">
 				<Viggan />
 			</div>
+      <div>
+      <Footer/>
+     </div>
 		</div>
 	);
 }
