@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { apiUrl } from "./RecipeComponent";
 
 const HeroSection = () => {
   return (
@@ -56,6 +57,7 @@ const HeroSection = () => {
       </section>
     </div>
   );
+
 };
 
 export default HeroSection;

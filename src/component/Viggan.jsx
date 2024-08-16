@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router";
-import { apiUrl } from "./DataDisplay";
+// import { apiUrl } from "./";
+import { Link } from "react-router-dom";
+import { apiUrl } from "./RecipeComponent";
 
 const Viggan = () => {
 	const [recipe, setRecipe] = useState([]);
@@ -52,14 +54,19 @@ const Viggan = () => {
 
 	return (
 		<div className=" shadow-sm rounded-md  border-t-2 mt-3">
-			<div>
-				<h1> Viggan </h1>
+			<div className=" items-center justify-center flex m-5 border-b-2 p-2 drop-shadow-lg  ">
+				<div className=" hover:bg-gray-400 cursor-not-allowed  bg-opacity-50 backdrop-blur-sm bg-gray-800 rounded-md p-2 text-white">
+					<h1> Veggan </h1>
+				</div>
 			</div>
 			<div className=" grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4 justify-center items-center p-2 md:p-4  lg:p-8 shadow-md">
 				{recipe.map((recipes) => (
 					<div key={recipes.id} className="relative">
 						<div className="group flex transform flex-col cursor-pointer overflow-hidden transition-all duration-200 shadow-md">
-							<div className="overflow-hidden rounded-md relative">
+							<Link
+								to={`/moreDetails/${recipes.title}`}
+								className="overflow-hidden rounded-md relative"
+							>
 								<img
 									src={recipes.image}
 									className="h-full w-full transform object-cover transition-all duration-200 group-hover:scale-105"
@@ -72,7 +79,7 @@ const Viggan = () => {
 										<h1 className="text-white">{recipes.title}</h1>
 									</div>
 								</div>
-							</div>
+							</Link>
 						</div>
 					</div>
 				))}
